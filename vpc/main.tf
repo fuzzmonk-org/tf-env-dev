@@ -25,7 +25,7 @@ provider "aws" {
 ###########
 
 module "vpc" {
-  source = "../../modules/vpc"
+  source = "../../tf-modules/vpc"
   env = "${var.env}"
   enable_dns_support = "true"
   enable_dns_hostnames = "true"
@@ -45,7 +45,7 @@ module "vpc" {
 ###########
 
 module "bastion" {
-  source = "../..//modules/bastion"
+  source = "../../tf-modules/bastion"
   key_name = "${var.key_name}"
   azs = ["${var.azs}"]
   bastion_ami_owner = "${var.bastion_ami_owner}"
