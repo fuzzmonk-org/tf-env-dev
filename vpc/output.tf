@@ -6,6 +6,10 @@ output "env" {
   value = "${var.env}"
 }
 
+output "vpc_id" {
+  value = "${module.vpc.vpc_id}"
+}
+
 output "azs" {
   value = "${module.vpc.azs}"
 }
@@ -25,13 +29,3 @@ output "bastion_public_ip" {
 output "bastion_eip_id" {
   value = "${module.bastion.bastion_eip_id}"
 }
-
-/*
-output "bucket" {
-  value = "${module.terraform.bucket}"
-}
-
-output "dynamodb_table" {
-  value = "${module.terraform.dynamodb_table}"
-}
-*/
